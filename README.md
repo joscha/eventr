@@ -1,7 +1,7 @@
 # Eventr - a JavaScript event simulator
 
 
-Code initially based on [https://github.com/kangax/protolicious/blob/master/event.simulate.js](), made library agnostic by a user here [http://stackoverflow.com/questions/6157929]() and was then made into a CoffeeScript module.
+Code initially based on [Protolicious](https://github.com/kangax/protolicious/blob/master/event.simulate.js), made library agnostic by a user [on stackoverflow](http://stackoverflow.com/questions/6157929) and was then made into a CoffeeScript module.
 
 ## Usage
 There is only one public static method:
