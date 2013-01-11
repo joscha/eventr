@@ -27,4 +27,4 @@ Just run `cake build` or when developing `cake watch`.
 *[2013-01-11]* - **0.1**: initial version
 
 ## License
-[MIT License](./LICENSE.md)
+MIT License, see LICENSE.md
