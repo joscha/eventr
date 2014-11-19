@@ -2,7 +2,7 @@
   "name": "eventr",
   "version": "0.2.0",
   "description": "a JavaScript event simulator",
-  "main": "lib/Eventr.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "grunt travis"
   },
