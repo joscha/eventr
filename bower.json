@@ -1,0 +1,25 @@
+{
+  "name": "eventr",
+  "version": "0.2.0",
+  "homepage": "https://github.com/joscha/eventr",
+  "authors": [
+    "Joscha Feth <joscha@feth.com>"
+  ],
+  "description": "a JavaScript event simulator",
+  "main": "build/eventr.min.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "event",
+    "simulator"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

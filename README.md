@@ -12,7 +12,7 @@ Eventr.simulate(element, eventName [, options]) -> DOMElement
 where
 
 - `element` is the DOM element to fire the event on
-- `eventName` is the name of event to fire. Currently only MouseEvents and HTMLEvents interfaces are supported, which include: 
+- `eventName` is the name of event to fire. Currently only MouseEvents and HTMLEvents interfaces are supported, which include:
   - `load`, `unload`, `abort`, `error`, `select`, `change`, `submit`, `reset`, `focus`, `blur`, `resize`, `scroll`
   - `click`, `dblclick`, `mousedown`, `mouseup`, `mouseover`, `mousemove`, `mouseout`
 - `options` is an optional object to fine-tune event properties like:
@@ -24,6 +24,7 @@ Returned is the target element for convenient chaining (well at least as easy as
 Just run `cake build` or when developing `cake watch`.
 
 ## Version history
+*[2014-11-19]* - **0.2.0**: build tools, min version, bower component
 *[2013-01-11]* - **0.1**: initial version
 
 ## License
