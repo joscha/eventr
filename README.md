@@ -1,5 +1,4 @@
-# Eventr - a JavaScript event simulator
-
+# [![Build Status](https://travis-ci.org/joscha/eventr.svg?branch=master)](https://travis-ci.org/joscha/eventr) Eventr - a JavaScript event simulator
 
 Code initially based on [Protolicious](https://github.com/kangax/protolicious/blob/master/event.simulate.js), made library agnostic by a user [on stackoverflow](http://stackoverflow.com/questions/6157929) and was then made into a CoffeeScript module.
 
@@ -21,11 +20,11 @@ where
 Returned is the target element for convenient chaining (well at least as easy as it gets with static methods :).
 
 ## Building from source
-Just run `cake build` or when developing `cake watch`.
+Just run `grunt`.
 
 ## Version history
-*[2014-11-19]* - **0.2.0**: build tools, min version, bower component
-*[2013-01-11]* - **0.1**: initial version
+* [2014-11-19]* - **0.2.0**: build tools, min version, bower component
+* [2013-01-11]* - **0.1**: initial version
 
 ## License
 MIT License, see LICENSE.md
