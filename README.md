@@ -23,8 +23,8 @@ Returned is the target element for convenient chaining (well at least as easy as
 Just run `grunt`.
 
 ## Version history
-* [2014-11-19]* - **0.2.0**: build tools, min version, bower component
-* [2013-01-11]* - **0.1**: initial version
+* [2014-11-19] - **0.2.0**: build tools, min version, bower component
+* [2013-01-11] - **0.1**: initial version
 
 ## License
 MIT License, see LICENSE.md
