@@ -1,6 +1,6 @@
 {
   "name": "eventr",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "a JavaScript event simulator",
   "main": "build/index.js",
   "scripts": {
