@@ -48,7 +48,7 @@ Eventr.simulate($('#foo'),'click'); // => fires "click" event on an element with
       };
 
       Eventr.simulate = function(target, eventName, options) {
-        var eventType, evt, matcher, name, oEvent, _ref;
+        var body, doc, eventDoc, eventType, evt, matcher, name, oEvent, _ref;
         if (options == null) {
           options = {};
         }
@@ -73,6 +73,21 @@ Eventr.simulate($('#foo'),'click'); // => fires "click" event on an element with
               break;
             default:
               evt.initMouseEvent(eventName, options.bubbles, options.cancelable, document.defaultView, options.button, options.pointerX, options.pointerY, options.pointerX, options.pointerY, options.ctrlKey, options.altKey, options.shiftKey, options.metaKey, options.button, target);
+              if (navigator.appVersion.indexOf("MSIE 9") !== -1 && evt.pageX === 0 && evt.pageY === 0) {
+                eventDoc = evt.relatedTarget.ownerDocument || document;
+                doc = eventDoc.documentElement;
+                body = eventDoc.body;
+                Object.defineProperty(evt, "pageX", {
+                  get: function() {
+                    return evt.clientX + (doc && doc.scrollLeft || body && body.scrollLeft || 0) - (doc && doc.clientLeft || body && body.clientLeft || 0);
+                  }
+                });
+                Object.defineProperty(evt, "pageY", {
+                  get: function() {
+                    return evt.clientY + (doc && doc.scrollTop || body && body.scrollTop || 0) - (doc && doc.clientTop || body && body.clientTop || 0);
+                  }
+                });
+              }
           }
           target.dispatchEvent(evt);
         } else {
