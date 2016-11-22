@@ -49,6 +49,27 @@ Eventr.simulate($('#foo'),'click'); // => fires "click" event on an element with
             evt.initEvent eventName, options.bubbles, options.cancelable
           else
             evt.initMouseEvent eventName, options.bubbles, options.cancelable, document.defaultView, options.button, options.pointerX, options.pointerY, options.pointerX, options.pointerY, options.ctrlKey, options.altKey, options.shiftKey, options.metaKey, options.button, target
+            # IE9 creates events with pageX and pageY set to 0.
+            # Trying to modify the properties throws an error, so we define getters to return the correct values.
+            # Code ported from jquery-ui
+            if navigator.appVersion.indexOf("MSIE 9") != -1 and evt.pageX == 0 and evt.pageY == 0
+              eventDoc = evt.relatedTarget.ownerDocument || document
+              doc = eventDoc.documentElement
+              body = eventDoc.body
+              Object.defineProperty( evt, "pageX", {
+                get: () ->
+                  return evt.clientX +
+                      ( doc && doc.scrollLeft || body && body.scrollLeft || 0 ) -
+                      ( doc && doc.clientLeft || body && body.clientLeft || 0 );
+              });
+
+              Object.defineProperty( evt, "pageY", {
+                get: () ->
+                  return evt.clientY +
+                      ( doc && doc.scrollTop || body && body.scrollTop || 0 ) -
+                      ( doc && doc.clientTop || body && body.clientTop || 0 );
+              });
+
         target.dispatchEvent evt
       else
         options.clientX = options.pointerX
