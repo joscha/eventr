@@ -1,5 +1,7 @@
 # [![Build Status](https://travis-ci.org/joscha/eventr.svg?branch=master)](https://travis-ci.org/joscha/eventr) Eventr - a JavaScript event simulator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/joscha/eventr.svg)](https://greenkeeper.io/)
+
 Code initially based on [Protolicious](https://github.com/kangax/protolicious/blob/master/event.simulate.js), made library agnostic by a user [on stackoverflow](http://stackoverflow.com/questions/6157929) and was then made into a CoffeeScript module.
 
 ## Usage
